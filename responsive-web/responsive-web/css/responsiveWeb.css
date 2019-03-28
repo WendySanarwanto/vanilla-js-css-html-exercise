@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header, .user-info-and-nav, .search-heading, .search-input, .results, ul.results-list > li {
+  border-style: solid;
+  border-width: 1px;
+}
+
+header {
+  padding: 0 4px 5px 20px;
+  margin: 1em 1.5em 1em 1em;
+  border-radius: 5px;
+  background-color: lightgreen;
+}
+
+.main-view {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.user-info-and-nav {
+  /* -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; */
+  min-width: 15%;  
+  height: 80vh;
+  padding: 0 4px 5px 20px;
+  margin: 0 1.5em 0 1em;
+  border-radius: 5px;  
+}
+
+.main-content {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;  
+  margin: 0 1.5em 0 -1em;
+}
+
+section.search-heading {
+  text-align: center;
+}
+
+section.search-input {
+  margin-top:0.5em;
+  padding: 15px 0 15px 15px;
+  background-color: gainsboro;
+}
+
+section.results {
+  margin-top:0.3em;
+  padding: 2px 0 2px 2px;
+}
+
+input#textInput {
+  height: 29px;
+  width: 50vw;
+}
+
+button.btn-search {
+  height: 35px;
+  min-width: 3vw;
+  cursor: pointer;
+}
+
+ul.results-list {
+  list-style-type: none;
+  margin-left: -1.5em;
+  margin-right: 1em;
+}
+
+ul.results-list > li {
+  height: 70px;
+  margin-bottom: 0.5em;
+}
+/* ul.results-list > li {
+
+} */
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .main-view {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .user-info-and-nav {
+    all: unset; /* unset max-width but it also unset everything !*/
+
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 0 4px 5px 20px;
+    margin: 0 1.5em 0 1em;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;    
+  }
+
+  .search-heading, .search-input {
+    margin-right: 0em;
+    margin-left: 2em;
+    margin-top: 0.5em;
+  }
+}
